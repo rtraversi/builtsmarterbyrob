@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Built Smarter by Rob — Professional websites and business automation solutions for small businesses. Modern design, smart workflows, real results." />
+  <title>Built Smarter by Rob | Websites &amp; Automations for Small Business</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <img src="builtsmarterlogo.png" alt="Built Smarter by Rob" style="height:44px; width:auto;" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#automations">Automations</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services"    onclick="closeMobileMenu()">Services</a>
+      <a href="#portfolio"   onclick="closeMobileMenu()">Portfolio</a>
+      <a href="#automations" onclick="closeMobileMenu()">Automations</a>
+      <a href="#about"       onclick="closeMobileMenu()">About</a>
+      <a href="#contact"     onclick="closeMobileMenu()">Contact</a>
+      <a href="#contact" class="btn btn-primary" onclick="closeMobileMenu()">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Smart Solutions for Small Business
+        </div>
+
+        <h1>
+          Your Business,<br />
+          <span class="grad-text">Built Smarter.</span>
+        </h1>
+
+        <p>
+          Professional websites and intelligent automations that save you time, impress your clients,
+          and help your small business compete like a big one — without the big-business price tag.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#services"  class="btn btn-primary">Explore Services</a>
+          <a href="#portfolio" class="btn btn-outline">View My Work</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3>10+</h3>
+            <p>Sites Launched</p>
+          </div>
+          <div class="hero-stat">
+            <h3>100%</h3>
+            <p>Small Business Focused</p>
+          </div>
+          <div class="hero-stat">
+            <h3>24/7</h3>
+            <p>Automations Running</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating tech card — hidden on mobile -->
+      <div class="hero-visual">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tc-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="tc-title">automation.js — Built Smarter</span>
+          </div>
+          <div class="tc-body">
+            <p class="tc-line"><span class="cm">// Route new lead from web form</span></p>
+            <p class="tc-line"><span class="kw">const</span> lead = <span class="fn">await</span> form.<span class="fn">capture</span>();</p>
+            <p class="tc-line"><span class="fn">await</span> crm.<span class="fn">addContact</span>(lead);</p>
+            <p class="tc-line"><span class="fn">await</span> email.<span class="fn">sendWelcome</span>(lead);</p>
+            <p class="tc-line"><span class="fn">await</span> slack.<span class="fn">notify</span>(<span class="str">"New lead!"</span>);</p>
+            <p class="tc-line"><span class="cm">// Done in &lt; 2 seconds, zero effort</span></p>
+            <p class="tc-line">&nbsp;</p>
+            <p class="tc-line"><span class="fn">schedule</span>.<span class="fn">every</span>(<span class="str">"day"</span>, <span class="fn">sendReport</span>);</p>
+            <p class="tc-line"><span class="cm">// Your business runs itself&nbsp;</span><span class="tc-cursor"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge">What I Do</div>
+        <h2>Two Ways I Help Your <span class="grad-text">Business Grow</span></h2>
+        <p>Whether you need an online presence that converts or workflows that run themselves — I build both.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1: Websites -->
+        <div class="service-card reveal">
+          <div class="service-icon">🌐</div>
+          <h3>Website Design &amp; Development</h3>
+          <p>
+            A professionally designed website is your hardest-working employee — available 24/7,
+            never calls in sick, and makes a great first impression every single time. I build
+            modern, fast, mobile-friendly sites tailored to your brand and your customers.
+          </p>
+          <ul class="service-features">
+            <li>Custom design that matches your brand</li>
+            <li>Mobile-first &amp; fully responsive</li>
+            <li>Fast load times &amp; SEO-ready</li>
+            <li>Contact forms &amp; lead capture</li>
+            <li>Easy to update and maintain</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Start a Project</a>
+        </div>
+
+        <!-- Card 2: Automations -->
+        <div class="service-card reveal">
+          <div class="service-icon">⚡</div>
+          <h3>Business Process Automation</h3>
+          <p>
+            Stop wasting hours on repetitive tasks. I build smart workflows using Make.com, Zapier,
+            and AI-powered tools that handle data entry, follow-ups, notifications, reporting, and
+            more — automatically — so your team can focus on work that actually moves the needle.
+          </p>
+          <ul class="service-features">
+            <li>Lead capture &amp; CRM automation</li>
+            <li>Email &amp; notification workflows</li>
+            <li>Data sync across your apps</li>
+            <li>AI-enhanced task handling</li>
+            <li>Reporting &amp; scheduling automation</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Automate My Business</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO
+  ============================================================ -->
+  <section id="portfolio" class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge">My Work</div>
+        <h2>Sites I've <span class="grad-text">Built &amp; Launched</span></h2>
+        <p>Real websites for real small businesses — each one custom-designed to help owners show up professionally online.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Site 1 -->
+        <div class="portfolio-card reveal">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg,#1a1040,#2d1b69);">
+            <div class="portfolio-thumb-icon" style="font-size:3.5rem; opacity:.25;">💆</div>
+          </div>
+          <div class="portfolio-body">
+            <h3>Katy Chavez</h3>
+            <p>A clean, welcoming website for a personal services professional — built to attract local clients and establish credibility online.</p>
+            <a href="https://www.katychavez.com" target="_blank" rel="noopener" class="portfolio-link">
+              Visit Site
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Site 2 -->
+        <div class="portfolio-card reveal">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg,#003366,#006994);">
+            <div class="portfolio-thumb-icon" style="font-size:3.5rem; opacity:.25;">🚢</div>
+          </div>
+          <div class="portfolio-body">
+            <h3>Cruising With Me Travel</h3>
+            <p>A vibrant travel agency site designed to inspire wanderlust, capture leads, and make booking inquiries effortless for vacation planners.</p>
+            <a href="https://www.cruisingwithmetravel.com" target="_blank" rel="noopener" class="portfolio-link">
+              Visit Site
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Site 3 (WIP) -->
+        <div class="portfolio-card reveal">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg,#0f2a14,#1a4526);">
+            <div class="portfolio-thumb-icon" style="font-size:3.5rem; opacity:.25;">🏹</div>
+            <div class="wip-badge">In Progress</div>
+          </div>
+          <div class="portfolio-body">
+            <h3>Strait Arrow NC</h3>
+            <p>An outdoor recreation and sporting goods site currently in development — stay tuned for the full launch.</p>
+            <a href="https://www.straitarrownc.com" target="_blank" rel="noopener" class="portfolio-link">
+              Preview Site
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <p style="color:var(--muted); margin-bottom:20px;">Ready to add your business to this list?</p>
+        <a href="#contact" class="btn btn-primary">Let's Build Your Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AUTOMATIONS
+  ============================================================ -->
+  <section id="automations" class="section">
+    <div class="container">
+      <div class="auto-layout">
+        <div class="auto-content reveal">
+          <div class="badge">Automations</div>
+          <h2>Work Less.<br /><span class="grad-text">Accomplish More.</span></h2>
+          <p>
+            The average small business owner spends 20+ hours a week on tasks that could run
+            on autopilot. I design and build automation systems that handle the busywork —
+            letting you and your team focus on growing the business.
+          </p>
+
+          <div class="auto-steps">
+            <div class="auto-step">
+              <div class="step-num">1</div>
+              <div>
+                <h4>Identify the Time Drains</h4>
+                <p>We map out the repetitive tasks eating up your team's hours — data entry, follow-ups, scheduling, reporting.</p>
+              </div>
+            </div>
+            <div class="auto-step">
+              <div class="step-num">2</div>
+              <div>
+                <h4>Design the Workflow</h4>
+                <p>I build a custom automation blueprint connecting your existing tools — no ripping out what already works.</p>
+              </div>
+            </div>
+            <div class="auto-step">
+              <div class="step-num">3</div>
+              <div>
+                <h4>Launch &amp; Let It Run</h4>
+                <p>Your automation goes live and starts working around the clock — we monitor, tune, and expand as you grow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-stack reveal">
+          <div class="tool-card">
+            <div class="tool-logo make">⚙️</div>
+            <div class="tool-info">
+              <h4>Make.com</h4>
+              <p>Visual workflow builder for complex multi-step automations — connects hundreds of apps with precision logic.</p>
+            </div>
+          </div>
+          <div class="tool-connector">connects with</div>
+          <div class="tool-card">
+            <div class="tool-logo zapier">⚡</div>
+            <div class="tool-info">
+              <h4>Zapier</h4>
+              <p>The fastest way to link your apps — 6,000+ integrations to get data moving between your favorite tools instantly.</p>
+            </div>
+          </div>
+          <div class="tool-connector">powered by</div>
+          <div class="tool-card">
+            <div class="tool-logo ai">🤖</div>
+            <div class="tool-info">
+              <h4>AI-Enhanced Processing</h4>
+              <p>Smart automation that reads, writes, categorizes, and responds — handling nuanced tasks that rules alone can't.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about" class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-avatar reveal">
+          <div class="avatar-frame">
+            👨‍💻
+            <div class="avatar-glow"></div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <div class="badge">About</div>
+          <h2>Hi, I'm Rob.</h2>
+          <p class="about-role">Founder &amp; Lead Developer — Built Smarter by Rob</p>
+
+          <p>
+            [Coming soon — this section will be updated with Rob's full bio, background, and what
+            drives his passion for helping small businesses compete smarter using technology.]
+          </p>
+          <p>
+            With experience in web development and business process automation, Rob works directly
+            with small business owners to understand their challenges and build practical, affordable
+            solutions that make a real difference — no jargon, no fluff, just results.
+          </p>
+          <p>
+            Based in [Location] and working with clients across the country, Built Smarter by Rob
+            is focused on one thing: giving small businesses the same digital edge that big companies
+            spend millions on — at a price that actually makes sense.
+          </p>
+
+          <div class="about-skills">
+            <span class="skill-tag">Web Design</span>
+            <span class="skill-tag">Web Development</span>
+            <span class="skill-tag">Make.com</span>
+            <span class="skill-tag">Zapier</span>
+            <span class="skill-tag">AI Automation</span>
+            <span class="skill-tag">Process Optimization</span>
+            <span class="skill-tag">Small Business Strategy</span>
+            <span class="skill-tag">Netlify</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <div class="badge">Get in Touch</div>
+          <h2>Let's Build Something <span class="grad-text">Smarter</span></h2>
+          <p>
+            Whether you need a new website, want to automate a headache-inducing process, or just
+            want to explore what's possible — I'd love to hear about your business. No hard sell,
+            just an honest conversation.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="cm-icon">📧</div>
+              <span>[Email coming soon]</span>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">📍</div>
+              <span>[Location coming soon]</span>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">⏱️</div>
+              <span>Typical response within 24 hours</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal">
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" novalidate>
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@mybusiness.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" placeholder="Smith &amp; Co." />
+            </div>
+
+            <div class="form-group">
+              <label for="service">I'm interested in…</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="website">Website Design &amp; Development</option>
+                <option value="automation">Business Automations</option>
+                <option value="both">Both — Website &amp; Automations</option>
+                <option value="other">Not sure yet — let's talk</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell me about your project</label>
+              <textarea id="message" name="message" placeholder="What are you working on? What's driving you crazy that you wish could be automated?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <img src="builtsmarterlogo.png" alt="Built Smarter by Rob" style="height:40px; width:auto;" />
+          </a>
+          <p style="margin-top:16px;">
+            Professional websites and smart automations built for small businesses that want to
+            compete smarter — not just harder.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Website Design</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#automations">Business Automations</a></li>
+            <li><a href="#automations">Make.com Workflows</a></li>
+            <li><a href="#automations">Zapier Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About Rob</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://www.katychavez.com" target="_blank" rel="noopener">Katy Chavez</a></li>
+            <li><a href="https://www.cruisingwithmetravel.com" target="_blank" rel="noopener">Cruising With Me</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Built Smarter by Rob. All rights reserved.</p>
+        <p>Built with <span style="color:var(--accent);">&#9679;</span> for small business.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -457,6 +457,237 @@ ul { list-style: none; }
   .compare-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
 }
 
+/* --- Managed automation: section title --- */
+.managed-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: .01em;
+}
+
+/* --- Why this matters block --- */
+.managed-why {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 36px;
+}
+.managed-why p {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.managed-why p:last-child { margin-bottom: 0; }
+.managed-why strong { color: var(--white); }
+.managed-why em { color: var(--text); font-style: italic; }
+
+/* --- Three Tiers of AI Risk --- */
+.ai-tiers { margin-bottom: 36px; }
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.tier-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.tier-card h5 {
+  font-size: 1rem;
+  margin: 12px 0 6px;
+  color: var(--white);
+}
+.tier-card .tier-examples {
+  font-size: .78rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+.tier-card ul li {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.tier-card ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tier-card .tier-verdict {
+  font-size: .85rem;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+}
+.tier-badge {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.tier-red { border-color: rgba(239,68,68,.3); }
+.tier-red .tier-badge { background: rgba(239,68,68,.15); color: #f87171; }
+.tier-red .tier-verdict { color: #f87171; }
+
+.tier-yellow { border-color: rgba(234,179,8,.32); }
+.tier-yellow .tier-badge { background: rgba(234,179,8,.15); color: #fbbf24; }
+.tier-yellow .tier-verdict { color: #fbbf24; }
+
+.tier-green { border-color: rgba(34,197,94,.4); background: rgba(34,197,94,.04); }
+.tier-green .tier-badge { background: rgba(34,197,94,.15); color: #4ade80; }
+.tier-green .tier-verdict { color: #4ade80; }
+
+/* --- Architecture flow diagram --- */
+.managed-arch { margin-bottom: 36px; }
+.arch-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  margin-bottom: 18px;
+}
+.arch-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 110px;
+}
+.arch-icon {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+.arch-label {
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.arch-arrow {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.arch-note {
+  font-size: .85rem;
+  color: var(--muted);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* --- Downloads block --- */
+.managed-downloads {
+  margin-top: 36px;
+  margin-bottom: 8px;
+  padding: 32px 28px;
+  background: rgba(99,102,241,.04);
+  border: 1px solid rgba(99,102,241,.18);
+  border-radius: var(--radius);
+}
+.downloads-intro {
+  text-align: center;
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.download-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+  color: var(--text);
+}
+.download-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+  color: var(--text);
+}
+.download-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.download-card h5 {
+  color: var(--white);
+  font-size: .95rem;
+  margin-bottom: 8px;
+  font-family: var(--font-head);
+}
+.download-card p {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+.download-link {
+  font-size: .85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.downloads-disclaimer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--muted);
+  font-style: italic;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .tier-grid,
+  .downloads-grid { grid-template-columns: 1fr; }
+  .arch-flow { flex-direction: column; }
+  .arch-arrow { transform: rotate(90deg); }
+}
+
 .service-card {
   background: var(--card);
   border: 1px solid var(--border);

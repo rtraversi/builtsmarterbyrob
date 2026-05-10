@@ -195,66 +195,174 @@
         <div class="managed-layout reveal">
 
           <div class="managed-intro">
-            <div class="service-icon" style="background:rgba(99,102,241,.12); border-color:rgba(99,102,241,.3); margin:0 auto 20px;">🖥️</div>
+            <div class="service-icon" style="background:rgba(99,102,241,.12); border-color:rgba(99,102,241,.3); margin:0 auto 20px;">🔒</div>
             <h3>Managed Automation Hosting</h3>
             <p>
-              Make and Zapier are excellent tools — but their pricing is built around charging you for every
-              task your automations run. The more your business automates, the more you pay. And your data
-              flows through their servers. <strong>Managed Automation is a different approach.</strong>
+              AI and automation can save your business hours every week — but if you handle confidential
+              information, <em>where</em> that data lives and travels matters as much as what the tools do.
+              Managed Automation Hosting is built for businesses that can't afford to get this wrong.
             </p>
             <p>
-              I provision a private <strong>n8n</strong> instance on a VPS you own — hosted on Digital Ocean —
-              and manage everything technical on your behalf. n8n is an enterprise-grade, open-source
-              automation platform with the same power as Make or Zapier. The difference: no per-operation
-              fees, no shared infrastructure, and no usage ceiling. Your server. Your data. Your workflows.
+              I provision a private <strong>n8n</strong> automation server on infrastructure <strong>you own</strong>,
+              connected to AI services under enterprise terms. The result: the same productivity gains
+              you'd get from popular AI tools, with a defensible answer to the question
+              <em>"where does our client data go?"</em>
             </p>
           </div>
 
-          <div class="managed-compare">
-            <div class="compare-col">
-              <h4>Make &amp; Zapier</h4>
-              <ul>
-                <li>Charged per task/operation — costs grow with volume</li>
-                <li>Data processed on third-party servers</li>
-                <li>Usage caps based on subscription tier</li>
-                <li>Platform controls your account and access</li>
-              </ul>
+          <!-- Why this matters -->
+          <div class="managed-why">
+            <h4 class="managed-section-title">Why This Matters</h4>
+            <p>
+              Most popular AI and automation tools route your data through shared servers, retain it for
+              years, or use it to train future models. For some businesses that's an inconvenience. For
+              attorneys, healthcare providers, financial advisors, HR teams, and anyone bound by
+              confidentiality obligations, it's a serious liability.
+            </p>
+            <p>
+              <strong>For attorneys specifically:</strong> a 2026 federal ruling
+              (<em>US v. Heppner</em>, S.D.N.Y.) confirmed that submitting client information to public AI
+              platforms can be treated as a third-party disclosure — meaning attorney-client privilege can
+              be waived the moment text is pasted into a free AI tool. ABA Model Rules <strong>1.1</strong> (competence),
+              <strong>1.6</strong> (confidentiality), and <strong>5.3</strong> (vendor supervision) apply to every AI tool a
+              firm uses. The architecture you choose determines whether your AI use is defensible.
+            </p>
+            <p>
+              The same principles apply to anyone with a duty of care over client information — patient
+              records, financial data, HR files, trade secrets. Convenience doesn't excuse exposure.
+            </p>
+          </div>
+
+          <!-- Three Tiers of AI Risk -->
+          <div class="ai-tiers">
+            <h4 class="managed-section-title">The Three Tiers of AI Risk</h4>
+            <div class="tier-grid">
+              <div class="tier-card tier-red">
+                <div class="tier-badge">High Risk</div>
+                <h5>Public / Consumer AI</h5>
+                <p class="tier-examples">ChatGPT Free &amp; Plus, Claude.ai Free/Pro, Gemini consumer</p>
+                <ul>
+                  <li>Data may be used to train future models</li>
+                  <li>Multi-year retention possible</li>
+                  <li>Counts as third-party disclosure</li>
+                </ul>
+                <p class="tier-verdict">Never with confidential data.</p>
+              </div>
+              <div class="tier-card tier-yellow">
+                <div class="tier-badge">Conditional</div>
+                <h5>Cloud Automation</h5>
+                <p class="tier-examples">Zapier, Make.com</p>
+                <ul>
+                  <li>Data flows through vendor servers</li>
+                  <li>SOC 2 / DPA available with paid tiers</li>
+                  <li>Vendor staff have controlled access</li>
+                </ul>
+                <p class="tier-verdict">Fine for non-privileged work — admin, intake, scheduling.</p>
+              </div>
+              <div class="tier-card tier-green">
+                <div class="tier-badge">Defensible</div>
+                <h5>Self-Hosted + API</h5>
+                <p class="tier-examples">n8n on your VPS + AI API on commercial terms</p>
+                <ul>
+                  <li>Data stays on infrastructure you control</li>
+                  <li>API calls under commercial terms — no training, short retention</li>
+                  <li>You own the logs, server, and deletion policy</li>
+                </ul>
+                <p class="tier-verdict">The architecture for confidential work.</p>
+              </div>
             </div>
-            <div class="compare-col featured">
-              <h4>Managed n8n on Your VPS</h4>
-              <ul>
-                <li>Flat server cost — typically $6–24/mo via Digital Ocean</li>
-                <li>Data stays on infrastructure you own and control</li>
-                <li>Unlimited executions, no tier restrictions</li>
-                <li>Your instance, your credentials, your server</li>
-              </ul>
+          </div>
+
+          <!-- How it works -->
+          <div class="managed-arch">
+            <h4 class="managed-section-title">How It Works</h4>
+            <div class="arch-flow">
+              <div class="arch-step">
+                <div class="arch-icon">🏢</div>
+                <div class="arch-label">Your business</div>
+              </div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-step">
+                <div class="arch-icon">🖥️</div>
+                <div class="arch-label">Your private<br>n8n server</div>
+              </div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-step">
+                <div class="arch-icon">🤖</div>
+                <div class="arch-label">AI API<br>(commercial terms)</div>
+              </div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-step">
+                <div class="arch-icon">📥</div>
+                <div class="arch-label">Result back<br>to your server</div>
+              </div>
             </div>
+            <p class="arch-note">
+              A closed loop. Client data never touches a consumer AI product. The AI call is governed by
+              enterprise terms with no training and a short retention window. Logs, backups, and access
+              controls live on infrastructure that belongs to you — not a third-party platform.
+            </p>
           </div>
 
           <div class="managed-bottom">
             <div class="managed-includes">
               <h4>What's Included</h4>
               <ul class="service-features">
-                <li>VPS provisioning on Digital Ocean (billed directly to you — no markup)</li>
+                <li>Private VPS provisioning (billed directly to you — no markup)</li>
                 <li>n8n installation, SSL certificate &amp; security hardening</li>
-                <li>Automated daily backups &amp; uptime monitoring</li>
+                <li>Encrypted daily backups &amp; uptime monitoring</li>
                 <li>Software updates, security patches &amp; ongoing maintenance</li>
-                <li>Automation builds — same capabilities as the Make/Zapier service</li>
+                <li>Automation builds tailored to your workflows</li>
+                <li>Documentation you can hand to a compliance officer or auditor</li>
               </ul>
             </div>
             <div class="managed-when">
               <h4>A Good Fit When&hellip;</h4>
               <ul class="service-features">
-                <li>Your automations run thousands of operations per month</li>
-                <li>You handle sensitive client data and want it on private infrastructure</li>
-                <li>You're bumping against plan limits on Make or Zapier</li>
-                <li>You want one consolidated platform for all your workflows</li>
+                <li>You handle confidential client data — legal, medical, financial, HR</li>
+                <li>Your industry has confidentiality, privilege, or compliance obligations</li>
+                <li>You want clear documentation for clients, auditors, or regulators</li>
+                <li>You'd rather own your data than rent space on someone else's servers</li>
               </ul>
             </div>
           </div>
 
-          <div style="text-align:center; margin-top:8px;">
-            <a href="#contact" class="btn btn-primary">Set Up My Instance</a>
+          <!-- Downloads -->
+          <div class="managed-downloads">
+            <h4 class="managed-section-title">Sample Documents &amp; Templates</h4>
+            <p class="downloads-intro">
+              Free starter templates you can use to build your own internal documentation. These same
+              templates are included — fully customized to your business — with every Managed Automation
+              Hosting engagement.
+            </p>
+            <div class="downloads-grid">
+              <a href="downloads/data-processing-agreement-template.html" target="_blank" rel="noopener" class="download-card">
+                <div class="download-icon">📄</div>
+                <h5>Data Processing Agreement</h5>
+                <p>Sample DPA covering data ownership, confidentiality, retention, and breach notification.</p>
+                <span class="download-link">View Template →</span>
+              </a>
+              <a href="downloads/ai-use-policy-template.html" target="_blank" rel="noopener" class="download-card">
+                <div class="download-icon">📋</div>
+                <h5>Internal AI Use Policy</h5>
+                <p>One-page template defining which AI tools your staff may use with what kinds of data.</p>
+                <span class="download-link">View Template →</span>
+              </a>
+              <a href="downloads/attorney-engagement-letter-language.html" target="_blank" rel="noopener" class="download-card">
+                <div class="download-icon">⚖️</div>
+                <h5>Attorney Disclosure Language</h5>
+                <p>Sample engagement-letter language for attorneys disclosing AI use to clients.</p>
+                <span class="download-link">View Template →</span>
+              </a>
+            </div>
+            <p class="downloads-disclaimer">
+              These templates are provided for informational purposes only. They are not legal advice and
+              should be reviewed and adapted by qualified counsel before use.
+            </p>
+          </div>
+
+          <div style="text-align:center; margin-top:32px;">
+            <a href="#contact" class="btn btn-primary">Talk About My Setup</a>
           </div>
 
         </div>
@@ -270,8 +378,8 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="badge">My Work</div>
-        <h2>Sites I've <span class="grad-text">Built &amp; Launched</span></h2>
-        <p>Real websites for real small businesses — each one custom-designed to help owners show up professionally online.</p>
+        <h2>Built to <span class="grad-text">Launch &amp; Last</span></h2>
+        <p>A look at the websites and automations I've built for small businesses — toggle between the two below.</p>
       </div>
 
       <!-- Tab buttons -->
@@ -282,6 +390,10 @@
 
       <!-- Websites panel -->
       <div class="tab-panel active" id="tab-websites">
+        <div class="section-header reveal" style="margin-bottom:32px;">
+          <h3 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 12px;">Sites I've <span class="grad-text">Built &amp; Launched</span></h3>
+          <p>Real websites for real small businesses — each one custom-designed to help owners show up professionally online.</p>
+        </div>
         <div class="portfolio-grid">
           <!-- Site 1 -->
           <div class="portfolio-card reveal">
@@ -354,6 +466,10 @@
 
       <!-- Automations panel -->
       <div class="tab-panel" id="tab-automations">
+        <div class="section-header reveal" style="margin-bottom:32px;">
+          <h3 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 12px;">Workflows That <span class="grad-text">Run Themselves</span></h3>
+          <p>Automations don't have to be complex to be valuable. Some handle a dozen tasks at once; others — like the office visit tracker — do one small job that quietly takes time and stress off a team's plate, so workers can focus on what matters and still get the information they need.</p>
+        </div>
         <div class="portfolio-grid">
 
           <!-- Automation 1: Proof Scanner -->

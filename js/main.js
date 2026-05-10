@@ -123,6 +123,21 @@ function showStatus(msg, type) {
   setTimeout(() => { formStatus.className = 'form-status'; }, 6000);
 }
 
+// --- Tabs (scoped per section so portfolio & service tabs don't clash) ---
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const section = btn.closest('section');
+    const target = btn.dataset.tab;
+    section.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    section.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + target).classList.add('active');
+    document.querySelectorAll('#tab-' + target + ' .reveal:not(.visible)').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80);
+    });
+  });
+});
+
 // --- Smooth anchor scroll (for older browsers) -------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
